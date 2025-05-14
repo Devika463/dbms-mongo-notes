@@ -7,8 +7,9 @@ pipeline of operations:
   -------
   $project: db.orders.aggregate([{$match:{paid:"Y"}},{$project:{order_no:1,year:1,_id:0}}]) //display the paid value's order_no and year in orders table based on assignment4
   ---------
-  $filter:
-  --------
+  $filter: db.orders.aggregate([{$match:{"items.quantity":{$lt:13}}},{$project:{or24mca25_db> db.orders.aggregate([{$match:{"items.quantity":{$lt:13}}},
+  --------         {$project:{order_no:1,items:{$filter:{input:"$items",as:"item",cond:{$lt:["$$item.quantity",13]}}}}}])
+
   $group
   $sort
   $limit
