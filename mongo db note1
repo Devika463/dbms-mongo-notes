@@ -9,3 +9,4 @@ so first put item in square bracket and item also a composite so use curly brace
 
 db.orders.find()  // displaying the inserted values
 
+db.orders.updateOne({order_no:o4},{$set:{paid:"Y"}})  //  update statement
