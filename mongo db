@@ -1,0 +1,11 @@
+[mca@localhost ~]$ mongo 
+Enter your MongoDB username: 24mca11 // to open
+
+db.createCollection("orders") // create a collection named orders in MongoDB
+
+db.orders.insertOne({order_no:"o1",year:2020,paid:"Y",cost:{price:30,currency:"INR"},items:[{pno:"p1",colors:["blue","black"],quantity:15,delivery_days:5}]}) //inserting values 
+into the collection orders,values set as key value pair,characters enclosed in double quotes,cost is a composite attribute (so use curly braces),item is a multivalued attribute 
+so first put item in square bracket and item also a composite so use curly braces.
+
+db.orders.find()  // displaying the inserted values
+
