@@ -1,0 +1,14 @@
+Aggregate framework in MongoDB
+-----------------------------------
+
+pipeline of operations:
+-------------------------
+  $match: db.orders.aggregate({$match:{paid:"Y"}}) //display the paid value in orders table based on assignment4
+  -------
+  $project: db.orders.aggregate([{$match:{paid:"Y"}},{$project:{order_no:1,year:1,_id:0}}]) //display the paid value's order_no and year in orders table based on assignment4
+  ---------
+  $filter:
+  --------
+  $group
+  $sort
+  $limit
